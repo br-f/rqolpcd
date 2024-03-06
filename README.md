@@ -7,9 +7,11 @@ This package has been written to the best of my knowledge and belief. Neverthele
 ## Obtaining rqolpcd
 Using devtools, install rqolpcd with
 
-``library(devtools)``
+```
+library(devtools)
 
-``install_github("br-f/rqolpcd")``
+install_github("br-f/rqolpcd")
+```
 
 ## Input data format
 Reads a CSV file containing, but not limited to, columns with the following names.
