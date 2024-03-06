@@ -1,3 +1,11 @@
+#' get_physical
+#'
+#' Returns vector with responses for the items belonging to the "physical" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "physical" scale.
+#' @examples 
+#' get_physical(df_qol[1,], "PPx")
 get_physical <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -9,6 +17,14 @@ get_physical <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_emotional
+#'
+#' Returns vector with responses for the items belonging to the "emotional" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "emotional" scale.
+#' @examples 
+#' get_emotional(df_qol[1,], "PPx")
 get_emotional <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -20,6 +36,14 @@ get_emotional <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_treatment
+#'
+#' Returns vector with responses for the items belonging to the "treatment" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "treatment" scale.
+#' @examples 
+#' get_treatment(df_qol[1,], "PPx")
 get_treatment <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -31,6 +55,14 @@ get_treatment <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_social
+#'
+#' Returns vector with responses for the items belonging to the "social" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "social" scale.
+#' @examples 
+#' get_social(df_qol[1,], "PPx")
 get_social <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -42,6 +74,14 @@ get_social <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_role
+#'
+#' Returns vector with responses for the items belonging to the "role" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "role" scale.
+#' @examples 
+#' get_role(df_qol[1,], "Asc")
 get_role <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -53,6 +93,14 @@ get_role <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_health
+#'
+#' Returns vector with responses for the items belonging to the "health" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "health" scale.
+#' @examples 
+#' get_health(df_qol[1,], "PPx")
 get_health <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -64,6 +112,14 @@ get_health <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_vitality
+#'
+#' Returns vector with responses for the items belonging to the "vitality" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "vitality" scale.
+#' @examples 
+#' get_vitality(df_qol[1,], "Asc")
 get_vitality <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -75,6 +131,14 @@ get_vitality <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_upper_respiratory
+#'
+#' Returns vector with responses for the items belonging to the "upper airways" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "upper airways" scale.
+#' @examples 
+#' get_upper_respiratory(df_qol[1,], "PPx")
 get_upper_respiratory <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -86,6 +150,14 @@ get_upper_respiratory <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_lower_respiratory
+#'
+#' Returns vector with responses for the items belonging to the "lower airways" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "lower airways" scale.
+#' @examples 
+#' get_respiratory(df_qol[1,], "PPx")
 get_lower_respiratory <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -97,6 +169,14 @@ get_lower_respiratory <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_hearing
+#'
+#' Returns vector with responses for the items belonging to the "hearing" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "hearing" scale.
+#' @examples 
+#' get_hearing(df_qol[1,], "PPx")
 get_hearing <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
@@ -108,6 +188,14 @@ get_hearing <- function(v, version = "Ad"){
     return(ret_val)
 }
 
+#' get_eating
+#'
+#' Returns vector with responses for the items belonging to the "eating / weight" scale of a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy 
+#' @return Vector with responses for the items belonging to the "eating / weight" scale.
+#' @examples 
+#' get_eating(df_qol[1,])
 get_eating <- function(v, version = "PPx"){
     ret_val <- switch(
         version,
@@ -119,22 +207,46 @@ get_eating <- function(v, version = "PPx"){
     return(ret_val)
 }
 
-get_scale <- function(v, scale_abbrev){
+#' get_scale
+#'
+#' Returns vector with responses for the items belonging to the scale of a given QOLPCD dataset specified with its abbreviation.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy
+#' @param scale_abbrev Abbrevation of the scale's name: P_hysical, E_motional,
+#' T_reatment, S_ocial, R_ole, H_ealth, V_itality, U_pper airways, L_ower airways,
+#' H_earin_g, Ea_ting
+#' @return Vector with responses for the items belonging to the specified scale.
+#' @examples 
+#' get_scale(df_qol[1,], "PPx", "Hg") # returns hearing scale, parent proxy version
+get_scale <- function(v, version, scale_abbrev){
     # as input: requires row of dataframe as values ("v")
-    if(scale_abbrev == "P"){  return(get_physical(v))}
-    if(scale_abbrev == "E"){  return(get_emotional(v))}
-    if(scale_abbrev == "T"){  return(get_treatment(v))}
-    if(scale_abbrev == "S"){  return(get_social(v))}
-    if(scale_abbrev == "R"){  return(get_role(v))}
-    if(scale_abbrev == "H"){  return(get_health(v))}
-    if(scale_abbrev == "V"){  return(get_vitality(v))}
-    if(scale_abbrev == "U"){  return(get_upper_respiratory(v))}
-    if(scale_abbrev == "L"){  return(get_lower_respiratory(v))}
-    if(scale_abbrev == "Hg"){ return(get_hearing(v))}
-    if(scale_abbrev == "Ea"){ return(get_eating(v))}
+    if(scale_abbrev == "P"){  return(get_physical(v, version))}
+    if(scale_abbrev == "E"){  return(get_emotional(v, version))}
+    if(scale_abbrev == "T"){  return(get_treatment(v, version))}
+    if(scale_abbrev == "S"){  return(get_social(v, version))}
+    if(scale_abbrev == "R"){  return(get_role(v, version))}
+    if(scale_abbrev == "H"){  return(get_health(v, version))}
+    if(scale_abbrev == "V"){  return(get_vitality(v, version))}
+    if(scale_abbrev == "U"){  return(get_upper_respiratory(v, version))}
+    if(scale_abbrev == "L"){  return(get_lower_respiratory(v, version))}
+    if(scale_abbrev == "Hg"){ return(get_hearing(v, version))}
+    if(scale_abbrev == "Ea"){ return(get_eating(v, version))}
     return(c())
 }
 
+#' which_scale
+#'
+#' Returns abbreviation of the scale name, a question belongs to in a specific
+#' QOLPCD age group version.
+#' @param q The number of the question, an Integer.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult
+#' (default), "Asc" = adolescent, "PPx" = parent proxy
+#' @return Abbrevation of the scale's name: P_hysical, E_motional,
+#' T_reatment, S_ocial, R_ole, H_ealth, V_itality, U_pper airways, L_ower airways,
+#' H_earin_g, Ea_ting
+#' @examples 
+#' which_scale(6, "Ad") # returns "E", as the sixth question in the adult version
+#' belongs to the emotional scale
 which_scale <- function(q, version = "Ad"){
   # takes number of question
     scale <- switch(
@@ -217,24 +329,47 @@ which_scale <- function(q, version = "Ad"){
     return(scale)
 }
 
-get_scale_mean <- function(v, scale_abbrev){
-    # as input: requires row of dataframe as values ("v")
-    # calculate mean of all valid answers, i.e. dont count NAs into calculation
+#' get_scale_mean
+#'
+#' Returns mean of a specific scale for a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param version Target age group of the specific questionnaire; "Ad" = adult (default), "Asc" = adolescent, "PPx" = parent proxy
+#' @param scale_abbrev Abbrevation of the scale's name: P_hysical, E_motional,
+#' T_reatment, S_ocial, R_ole, H_ealth, V_itality, U_pper airways, L_ower airways,
+#' H_earin_g, Ea_ting
+#' @return Mean of the specified scale for the given dataset, considering only
+#' non-missing values, if at least half the values are non-missing. Otherwise
+#' returns NA.
+#' @examples 
+#' get_scale_mean(df_qol[1,], "Ad", "P")
+get_scale_mean <- function(v, version, scale_abbrev){
     m <- NA
-    scale_vals <- get_scale(v, scale_abbrev)
+    scale_vals <- get_scale(v, version, scale_abbrev)
     if(include_scale(scale_vals)){
-        # it at least half the items have been answered validly: calculate mean
         m <- mean(
             scale_vals,
             na.rm = TRUE)
     }
-    # otherwise return NA (to flag item and therefore scale to not be included later)
     return(m)
 }
 
+#' impute_mean
+#'
+#' Replaces missing values in a QOLPCD dataframe by the mean of the non-missing
+#' values belonging to the same scale in the same dataset. If more than half of
+#' the values that comprise a scale are missing, the missing values are not
+#' imputed.
+#' @param df A QOLPCD dataframe with columns with the following names. The coded
+#' responses to question 1, question 2, etc.: q1, q2, ..., q40. They should be
+#' adjacent to each other and arranged in that order left to right and should
+#' each be coded as integers, 0 - 3 (some questions 0 - 4), higher value corresponding
+#' to higher QOL
+#' Furthermore: version. A string specifying the questionnaire's age group,
+#' either "Ad" (adult), "Asc" (adolescent), "PPx" (parent proxy)
+#' @return df with missing values imputed where appropriate.
+#' @examples 
+#' impute_mean(df_qol)
 impute_mean <- function(df){
-  # imputation by replacing all missing values (NA)
-  # as input: requires row of dataframe as values ("v")
     tmp <- df
     first_question_index <- match("q1",colnames(df))
     for (i in 1:nrow(tmp)){
@@ -249,6 +384,7 @@ impute_mean <- function(df){
             if(is.na(df[i,j])){
                 tmp[i,j] <- get_scale_mean(
                     df[i,],
+                    tmp[i,]$version,
                     which_scale(
                         j + 1 - first_question_index,
                         tmp[i,]$version
@@ -260,14 +396,33 @@ impute_mean <- function(df){
     return(tmp)
 }
 
+#' include_scale
+#'
+#' Assesses, whether a given scale of a specific QOLPCD dataset contains few
+#' enough missing values to be included in the analyses.
+#' @param scale Vector comprising responses to questions all belonging to the
+#' same scale of a specific QOLPCD dataset.
+#' @return True if at least half the items are non-missing. False otherwise.
+#' @examples 
+#' include_scale(get_physical(df_qol[1,],"PPx"))
 include_scale <- function(scale){
-    # returns Bool: false if at least half the items on the scale are
-    # missing values
     return(sum(is.na(scale)) < length(scale)/2)
 }
 
+#' score_scale
+#'
+#' Calculates the score of a specific scale for a given QOLPCD dataset.
+#' @param v Vector representing one QOLPCD dataset, i.e. a single patient's encoded questionnaire.
+#' @param scale_abbrev Abbrevation of the scale's name: P_hysical, E_motional,
+#' T_reatment, S_ocial, R_ole, H_ealth, V_itality, U_pper airways, L_ower airways,
+#' H_earin_g, Ea_ting
+#' @param version Target age group of the specific questionnaire; "Ad" = adult
+#' (default), "Asc" = adolescent, "PPx" = parent proxy
+#' @return The scale's score as a percentage of the maximum achievable score for
+#' that scale and questionnaire version.
+#' @examples 
+#' score_scale(df_qol[1,], "P", "Ad")
 score_scale <- function(v, scale_abbrev, version="Ad"){
-    # as input: requires row of dataframe as values ("v")
     scale_max <- switch(
         version,
         "Ad" = switch(
@@ -478,6 +633,30 @@ score_scale <- function(v, scale_abbrev, version="Ad"){
     return(sum/scale_max*100)
 }
 
+#' add_scores
+#'
+#' Calculates the score for all scales in a QOLPCD dataframe and adds them to the
+#' dataframe as separate columns.
+#' @param df A QOLPCD dataframe with columns with the following names. The coded
+#' responses to question 1, question 2, etc.: q1, q2, ..., q40. They should be
+#' adjacent to each other and arranged in that order left to right and should
+#' each be coded as integers, 0 - 3 (some questions 0 - 4), higher value corresponding
+#' to higher QOL
+#' Furthermore: version. A string specifying the questionnaire's age group,
+#' either "Ad" (adult), "Asc" (adolescent), "PPx" (parent proxy)
+#' @return df amended by columns with the computed scores. Their names are
+#' @examples 
+#' df_qol <- add_scores(df_qol)
+#' colnames(df_qol)
+#' # [...] ...             ...          
+#' # [45]  "q38"           "q39"          
+#' # [47]  "q40"           "physical"     
+#' # [49]  "emotional"     "treatment"    
+#' # [51]  "social"        "role"         
+#' # [53]  "health"        "vitality"     
+#' # [55]  "upper.airways" "lower.airways"
+#' # [57]  "hearing"       "eating"
+#' @export
 add_scores <- function(df){
     tmp <- df
     scale_names <- c(
@@ -501,6 +680,31 @@ add_scores <- function(df){
     return(tmp)
 }
 
+#' impute_and_scores
+#'
+#' First imputes missing values where appropriate using impute_mean(). Then
+#' calculates the score for all scales in a QOLPCD dataframe and adds them to the
+#' dataframe as separate columns.
+#' @param df A QOLPCD dataframe with columns with the following names. The coded
+#' responses to question 1, question 2, etc.: q1, q2, ..., q40. They should be
+#' adjacent to each other and arranged in that order left to right and should
+#' each be coded as integers, 0 - 3 (some questions 0 - 4), higher value corresponding
+#' to higher QOL
+#' Furthermore: version. A string specifying the questionnaire's age group,
+#' either "Ad" (adult), "Asc" (adolescent), "PPx" (parent proxy)
+#' @return df amended by columns with the computed scores, based on imputed missing
+#' values.
+#' @examples 
+#' df_qol = read.csv(
+#'     'qolpcd.csv',
+#'     sep=';',
+#'     header=TRUE,
+#'     dec=",",
+#'     na.strings=c(99,88,''),
+#'     encoding='utf-8'
+#' )
+#' df_qol <- impute_and_score(df_qol)
+#' @export
 impute_and_score <- function(df){
     return(add_scores(impute_mean(df)))
 }
