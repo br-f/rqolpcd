@@ -51,7 +51,7 @@ Note that q1, q2, ..., q40 should be adjacent to each other and arranged in that
 
 3. Compute the scores with
 
-    ``df_qol <- impute_and_score(df_qol)``
+    ``df_qol <- rqolpcd::impute_and_score(df_qol)``
 
 
 4. Returns the original dataframe, amended by the following columns.
