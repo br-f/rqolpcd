@@ -1,7 +1,7 @@
 # rqolpcd
 Computes scores for the scales of the QOL-PCD questionnaire's English and German versions for the adult and pediatric (adolescents, parent proxies) target groups.
 
-# Input data format
+## Input data format
 Reads a CSV file with colnames:
 
 ``ID .... String; an identifier unique to that patient``
@@ -20,7 +20,7 @@ Reads a CSV file with colnames:
 
 ``q40 ... Int, 0 - 3, coded response to question 40, ...``
 
-# Usage
+## Usage
 
 1. Read in your data in the format specified above.
 
@@ -58,12 +58,12 @@ Reads a CSV file with colnames:
 
     ``XXX``
 
-# Handling of missing data
+## Handling of missing data
 If for a given questionnaire more than half of all items on a scale have been coded as missing, the scale receives ``NA`` as score.
 
 Otherwise, missing values are imputed as the mean of all non-missing responses in that questionnaire belonging to that scale.
 
-# References
+## References
 For the original publications see
 - Jane S et al. (2015): ``A quality-of-life measure for adults with primary ciliary dyskinesia: QOL-PCD``. Eur Respir J; 46:375-383.
   [``DOI 10.1183/09031936.00216214``](doi.org/10.1183/09031936.00216214)
