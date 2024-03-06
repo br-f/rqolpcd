@@ -3,15 +3,25 @@ Computes scores for the scales of the QOL-PCD questionnaire's English and German
 
 # Input data format
 Reads a CSV file with colnames:
+
 ID .... String; an identifier unique to that patient
+
 Ver ... String, either "Ad" (adult), "Asc" (adolescent), "PP" (parent proxy)
+
 Lang .. String, either "Eng" (Englisch) or "Ger" (German) 
+
 q1 .... Int, 0 - 3; coded response to question 1, higher value corresponds to higher QOL
+
 q2 .... Int, 0 - 3, coded response to question 2, ...
+
 q3 .... etc. pp.
+
 .
+
 .
+
 .
+
 q40 ... Int, 0 - 3, coded response to question 40, ...
 
 # Usage
