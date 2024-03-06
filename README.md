@@ -8,7 +8,7 @@ This package has been written to the best of my knowledge and belief. Neverthele
 Using devtools, install rqolpcd with
 
 ```
-library(devtools)
+library("devtools")
 
 install_github("br-f/rqolpcd")
 ```
@@ -34,7 +34,7 @@ Note that q1, q2, ..., q40 should be adjacent to each other and arranged in that
 
 1. Include rqolpcd.
 
-    ``library(rqolpcd)``
+    ``library("rqolpcd")``
 
 2. Read in your data in the format specified above.
 
