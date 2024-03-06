@@ -26,37 +26,29 @@ Reads a CSV file with colnames:
 
 2. Call XXXXXX
 
-3. Returns the original dataframe, amended by the following columns:
+3. Returns the original dataframe, amended by the following columns, with scales that are not defined for an age group being are score as ``NA``:
 
-    ``physical ..........``
+    ``physical ....... physical score``
 
-    ``emotional .........``
+    ``emotional ...... emotional score``
 
-    ``social ............``
+    ``social ......... social score``
 
-    ``role ..............``
+    ``treatment ...... treatment burden score``
 
-    ``XXX``
+    ``role ........... role score``
 
-    ``XXX``
+    ``health ......... health perception score``
 
-    ``p_diff``
+    ``vitality ....... vitality score``
 
-    ``XXX``
+    ``upper.airways .. symptoms of the upper airways score``
 
-    ``XXX``
+    ``lower.airways .. symptoms of the lower airways score``
 
-    ``p_pval``
+    ``hearing ........ hearing score``
 
-    ``XXX``
-    
-    ``XXX``
-
-    ``p_reldiff``
-
-    ``XXX``
-
-    ``XXX``
+    ``eating ......... eating / weight score; only applicabile to parent proxy questionnaires``
 
 ## Handling of missing data
 If for a given questionnaire more than half of all items on a scale have been coded as missing, the scale receives ``NA`` as score.
