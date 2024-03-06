@@ -40,7 +40,9 @@ Reads a CSV file with colnames:
 
 3. Call XXXXXX
 
-4. Returns the original dataframe, amended by the following columns, with scales that are not defined for an age group being are score as ``NA``:
+4. Returns the original dataframe, amended by the following columns.
+
+    Scales that are not defined for an age group are scored as ``NA``.
 
     ``physical ....... physical score``
 
