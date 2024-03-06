@@ -5,7 +5,7 @@ Computes scores for the scales of the QOL-PCD questionnaire's English and German
 This package has been written to the best of my knowledge and belief. Nevertheless, I assume no liability for the correctness of the algorithm and calculated results. Please refer to the relevant publications for details on the calculation of the scores. You may find them below.
 
 ## Obtaining rqolpcd
-Using devtools, install rqolpcd with:
+Using devtools, install rqolpcd with
 
 ``library(devtools)``
 
@@ -16,11 +16,7 @@ Reads a CSV file containing, but not limited to, columns with the following name
 
 Note that q1, q2, ..., q40 should be adjacent to each other and arranged in that order left to right.
 
-``ID .... String; an identifier unique to that patient``
-
-``Ver ... String, either "Ad" (adult), "Asc" (adolescent), "PP" (parent proxy)``
-
-``Lang .. String, either "Eng" (Englisch) or "Ger" (German)``
+``version ... String, either "Ad" (adult), "Asc" (adolescent), "PPx" (parent proxy)``
 
 ``q1 .... Int, 0 - 3; coded response to question 1, higher value corresponds to higher QOL``
 
@@ -40,7 +36,21 @@ Note that q1, q2, ..., q40 should be adjacent to each other and arranged in that
 
 2. Read in your data in the format specified above.
 
-3. Call XXXXXX
+    ```
+    df_qol = read.csv(
+        'qolpcd.csv',
+        sep=';',
+        header=TRUE,
+        dec=",",
+        na.strings=c(99,88,''),
+        encoding='utf-8'
+    )
+    ```
+
+3. Compute the scores with
+
+    ``df_qol <- impute_and_score(df_qol)``
+
 
 4. Returns the original dataframe, amended by the following columns.
 
@@ -54,11 +64,11 @@ Note that q1, q2, ..., q40 should be adjacent to each other and arranged in that
 
     ``treatment ...... treatment burden score``
 
-    ``role ........... role score``
+    ``role ........... role score; only applicable to adults and adolescents``
 
-    ``health ......... health perception score``
+    ``health ......... health perception score; only applicable to adults and parent proxy``
 
-    ``vitality ....... vitality score``
+    ``vitality ....... vitality score; only applicable to adults and adolescents``
 
     ``upper.airways .. symptoms of the upper airways score``
 
