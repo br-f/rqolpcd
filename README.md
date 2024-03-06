@@ -59,7 +59,7 @@ Reads a CSV file with colnames:
     ``XXX``
 
 # Handling of missing data
-If for a given questionnaire more than half of all items on a scale have been coded as missing, the scale receives NA as score.
+If for a given questionnaire more than half of all items on a scale have been coded as missing, the scale receives ``NA`` as score.
 
 Otherwise, missing values are imputed as the mean of all non-missing responses in that questionnaire belonging to that scale.
 
