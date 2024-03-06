@@ -12,7 +12,9 @@ Using devtools, install rqolpcd with:
 ``install_github("br-f/rqolpcd")``
 
 ## Input data format
-Reads a CSV file with colnames:
+Reads a CSV file containing, but not limited to, columns with the following names.
+
+Note that q1, q2, ..., q40 should be adjacent to each other and arranged in that order left to right.
 
 ``ID .... String; an identifier unique to that patient``
 
