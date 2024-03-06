@@ -4,6 +4,7 @@ Computes scores for the scales of the QOL-PCD questionnaire's English and German
 # Input data format
 Reads a CSV file with colnames:
 
+``
 ID .... String; an identifier unique to that patient
 
 Ver ... String, either "Ad" (adult), "Asc" (adolescent), "PP" (parent proxy)
@@ -23,6 +24,7 @@ q3 .... etc. pp.
 .
 
 q40 ... Int, 0 - 3, coded response to question 40, ...
+``
 
 # Usage
 Read in your data in the format specified above.
