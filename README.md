@@ -1,6 +1,13 @@
 # rqolpcd
 Computes scores for the scales of the QOL-PCD questionnaire's English and German versions for the adult and pediatric (adolescents, parent proxies) target groups.
 
+## Obtaining rqolpcd
+Using devtools, install rqolpcd with:
+
+``library(devtools)``
+
+``install_github("br-f/rqolpcd")``
+
 ## Input data format
 Reads a CSV file with colnames:
 
@@ -22,11 +29,15 @@ Reads a CSV file with colnames:
 
 ## Usage
 
-1. Read in your data in the format specified above.
+1. Include rqolpcd.
 
-2. Call XXXXXX
+    ``library(rqolpcd)``
 
-3. Returns the original dataframe, amended by the following columns, with scales that are not defined for an age group being are score as ``NA``:
+2. Read in your data in the format specified above.
+
+3. Call XXXXXX
+
+4. Returns the original dataframe, amended by the following columns, with scales that are not defined for an age group being are score as ``NA``:
 
     ``physical ....... physical score``
 
