@@ -9,8 +9,8 @@
 get_physical <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q1, v$q2, v$q3, v$q4),
-        "Asc"  = c(v$q1, v$q2, v$q3, v$q14, v$q15),
+        "Ad"  = c(v$q1, v$q2, v$q3, v$q4),
+        "Asc" = c(v$q1, v$q2, v$q3, v$q14, v$q15),
         "PPx" = c(v$q1, v$q2, v$q3, v$q4, v$q12),
         c()
     )
@@ -28,8 +28,8 @@ get_physical <- function(v, version = "Ad"){
 get_emotional <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q6, v$q9, v$q10, v$q17),
-        "Asc"  = c(v$q4, v$q5, v$q6, v$q10),
+        "Ad"  = c(v$q6, v$q9, v$q10, v$q17),
+        "Asc" = c(v$q4, v$q5, v$q6, v$q10),
         "PPx" = c(v$q5, v$q7, v$q9),
         c()
     )
@@ -47,8 +47,8 @@ get_emotional <- function(v, version = "Ad"){
 get_treatment <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q11, v$q12, v$q13, v$q14),
-        "Asc"  = c(v$q11, v$q12, v$q13),
+        "Ad"  = c(v$q11, v$q12, v$q13, v$q14),
+        "Asc" = c(v$q11, v$q12, v$q13),
         "PPx" = c(v$q11, v$q14, v$q18, v$q19),
         c()
     )
@@ -66,8 +66,8 @@ get_treatment <- function(v, version = "Ad"){
 get_social <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q15, v$q16, v$q18, v$q19),
-        "Asc"  = c(v$q16, v$q17, v$q18),
+        "Ad"  = c(v$q15, v$q16, v$q18, v$q19),
+        "Asc" = c(v$q16, v$q17, v$q18),
         "PPx" = c(v$q10, v$q16, v$q17),
         c()
     )
@@ -85,8 +85,8 @@ get_social <- function(v, version = "Ad"){
 get_role <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q20, v$q21),
-        "Asc"  = c(v$q19, v$q20, v$q21),
+        "Ad"  = c(v$q20, v$q21),
+        "Asc" = c(v$q19, v$q20, v$q21),
         "PPx" = c(),
         c()
     )
@@ -104,8 +104,8 @@ get_role <- function(v, version = "Ad"){
 get_health <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q22, v$q23, v$q24, v$q25, v$q27, v$q27),
-        "Asc"  = c(),
+        "Ad"  = c(v$q22, v$q23, v$q24, v$q25, v$q27, v$q27),
+        "Asc" = c(),
         "PPx" = c(v$q6, v$q8, v$q15, v$q20),
         c()
     )
@@ -123,8 +123,8 @@ get_health <- function(v, version = "Ad"){
 get_vitality <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q5, v$q7, v$q8),
-        "Asc"  = c(v$q7, v$q8, v$q9),
+        "Ad"  = c(v$q5, v$q7, v$q8),
+        "Asc" = c(v$q7, v$q8, v$q9),
         "PPx" = c(),
         c()
     )
@@ -142,8 +142,8 @@ get_vitality <- function(v, version = "Ad"){
 get_upper_respiratory <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q30, v$q31, v$q37, v$q40),
-        "Asc"  = c(v$q28, v$q30, v$q34, v$q35, v$q37),
+        "Ad"  = c(v$q30, v$q31, v$q37, v$q40),
+        "Asc" = c(v$q28, v$q30, v$q34, v$q35, v$q37),
         "PPx" = c(v$q26, v$q27, v$q29, v$q32),
         c()
     )
@@ -161,8 +161,8 @@ get_upper_respiratory <- function(v, version = "Ad"){
 get_lower_respiratory <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q28, v$q32, v$q33, v$q34, v$q35, v$q36, v$q38),
-        "Asc"  = c(v$q22, v$q23, v$q24, v$q25, v$q29, v$q31, v$q32),
+        "Ad"  = c(v$q28, v$q32, v$q33, v$q34, v$q35, v$q36, v$q38),
+        "Asc" = c(v$q22, v$q23, v$q24, v$q25, v$q29, v$q31, v$q32),
         "PPx" = c(v$q23, v$q24, v$q25, v$q30, v$q31, v$q33),
         c()
     )
@@ -180,8 +180,8 @@ get_lower_respiratory <- function(v, version = "Ad"){
 get_hearing <- function(v, version = "Ad"){
     ret_val <- switch(
         version,
-        "Ad" = c(v$q29, v$q39),
-        "Asc"  = c(v$q26, v$q27, v$q33, v$q36),
+        "Ad"  = c(v$q29, v$q39),
+        "Asc" = c(v$q26, v$q27, v$q33, v$q36),
         "PPx" = c(v$q22, v$q28),
         c()
     )
@@ -199,8 +199,8 @@ get_hearing <- function(v, version = "Ad"){
 get_eating <- function(v, version = "PPx"){
     ret_val <- switch(
         version,
-        "Ad" = c(),
-        "Asc"  = c(),
+        "Ad"  = c(),
+        "Asc" = c(),
         "PPx" = c(v$q13, v$q21, v$q34),
         c()
     )
