@@ -14,7 +14,7 @@ install_github("br-f/rqolpcd")
 ```
 
 ## Input data format
-Reads a CSV file containing, but not limited to, columns with the following names.
+Reads a dataframe containing, but not limited to, columns with the following names.
 
 Note that q1, q2, ..., q40 should be adjacent to each other and arranged in that order left to right.
 
@@ -81,7 +81,7 @@ Note that q1, q2, ..., q40 should be adjacent to each other and arranged in that
     ``eating ......... eating / weight score; only applicabile to parent proxy questionnaires``
 
 ## Handling of missing data
-If for a given questionnaire more than half of all items on a scale have been coded as missing, the scale receives ``NA`` as score.
+If for a given questionnaire at least half of all items on a scale have been coded as missing, the scale receives ``NA`` as score.
 
 Otherwise, missing values are imputed as the mean of all non-missing responses in that questionnaire belonging to that scale.
 
