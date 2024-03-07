@@ -1,5 +1,5 @@
 # rqolpcd
-r qolpcd computes scores for the scales of the QOL-PCD questionnaire's English and German versions for the adult and pediatric (adolescents, parent proxies) target groups.
+Computes scores for the scales of the QOL-PCD questionnaire's English and German versions for the adult and pediatric (adolescents, parent proxies) target groups.
 
 ## Disclaimer
 This package has been written to the best of my knowledge and belief. Nevertheless, I assume no liability for the correctness of the algorithm and calculated results. Please refer to the relevant publications for details on the calculation of the scores. You may find them below.
